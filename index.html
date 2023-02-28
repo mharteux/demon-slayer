@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Anime</title>
+    <link rel="stylesheet" href="style.css"> <!--style the website-->
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+
+    <!--icon link-->
+    <script src="https://kit.fontawesome.com/fe1178b9a0.js" crossorigin="anonymous"></script>
+
+    <!--meta link-->
+    <meta charset="UTF-8">
+    <meta name="description" content="anime">
+    <meta name="keywords" content="anime, demon, slayer, katana">
+    <meta name="author" content="Matheus">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <!--video-->
+    <div class="background">
+        <video autoplay loop id="video">
+            <source src="/project_video/anime - 01.mp4" type="video/mp4">
+        </video>
+        <div class="middle-text">
+            <h1>Your Dreams starts here</h1>
+        </div>
+    </div>
+
+    <!--icon-->
+    <div>
+        <i class="fas fa-volume-high" id="sound" onclick="change()"></i>
+    </div>
+
+    <!--menu bar-->
+    <div class="menubar">
+        <a class="active" href="/index.html">Home</a>
+        <a href="/news.html">News</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/about.html">About</a>
+    </div>
+
+    <script>
+        
+        /*mute-function*/
+        var soundOFF = false; 
+        var soundON = document.getElementById('video');
+
+        function change(){
+            
+            let i = document.getElementById('sound');
+            
+            if (soundOFF == false){
+                i.className = "fa fa-volume-xmark";
+                soundOFF = true;
+                soundON.muted = !soundON.muted;
+            } 
+            else{
+                i.className = "fas fa-volume-high"; 
+                soundOFF = false;
+                soundON.muted = !soundON.muted;
+            }
+        };
+
+    </script>
+</body>
+</html>

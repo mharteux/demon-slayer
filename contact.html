@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Anime</title>
+    <link rel="stylesheet" href="stylecontact.css"> <!--style the website-->
+    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
+
+    <!--icon link-->
+    <script src="https://kit.fontawesome.com/fe1178b9a0.js" crossorigin="anonymous"></script>
+
+    <!--meta link-->
+    <meta charset="UTF-8">
+    <meta name="description" content="anime">
+    <meta name="keywords" content="anime, demon, slayer, katana">
+    <meta name="author" content="Matheus">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <!--video-->
+    <video autoplay loop id="video">
+        <source src="/project_video/anime - 02.mp4" type="video/mp4">
+    </video>
+
+    <!--audio-->
+    <audio autoplay loop id="music">
+        <source src="/project_music/demon slayer .mp3" type="audio/mp3">
+    </audio>
+
+    <!--box and text-->
+    <div class="box">
+        <h1>Contact</h1> 
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, enim quis obcaecati sapiente molestiae ducimus blanditiis voluptatum. Error quasi expedita culpa perspiciatis. Optio aspernatur quis iste cum nam velit quas.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores impedit vel sequi magnam voluptas doloremque amet iusto fuga blanditiis, minima eveniet aperiam possimus! Provident dicta quidem distinctio quos mollitia est.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolor maxime repudiandae hic nam! Vitae voluptatibus, exercitationem laboriosam nobis tempore accusantium at impedit, perspiciatis, facilis incidunt vel est et. Quis?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, sit, aliquid quisquam nulla distinctio omnis ipsa numquam dolore totam rem sequi harum illo. Ipsum sunt harum id sapiente at hic.
+        </p>
+    </div>
+
+    <!--menu bar-->
+    <div class="menubar">
+        <a class="active" href="/index.html">Home</a>
+        <a href="/news.html">News</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/about.html">About</a>
+    </div>
+
+    <!--icons-->
+    <div>
+        <i class="fa fa-volume-high" id="sound" onclick="change()"></i>
+    </div>
+
+    <script>
+        
+        /*mute-function*/
+        var soundOFF = false; 
+        var soundON = document.getElementById('music');
+
+        function change(){
+            
+            let i = document.getElementById('sound');
+            
+            if (soundOFF == false){
+                i.className = "fa fa-volume-xmark";
+                soundOFF = true;
+                soundON.muted = !soundON.muted;
+            } 
+            else{
+                i.className = "fa fa-volume-high"; 
+                soundOFF = false;
+                soundON.muted = !soundON.muted;
+            }
+        };
+
+    </script>
+
+</body>
+</html>
