@@ -22,7 +22,7 @@
     <!--video-->
     <div class="background">
         <video autoplay loop id="video">
-            <source src="/videos/anime - 01.mp4" type="video/mp4">
+            <source src="videos/anime - 01.mp4" type="video/mp4">
         </video>
         <div class="middle-text">
             <h1>Your Dreams starts here</h1>
@@ -36,34 +36,36 @@
 
     <!--menu bar-->
     <div class="menubar">
-        <a class="active" href="/index.html">Home</a>
-        <a href="/content/news.html">News</a>
-        <a href="/content/contact.html">Contact</a>
-        <a href="/content/about.html">About</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
     </div>
-
+    
     <script>
-        
-        /*mute-function*/
-        var soundOFF = false; 
-        var soundON = document.getElementById('video');
 
-        function change(){
-            
-            let i = document.getElementById('sound');
-            
-            if (soundOFF == false){
-                i.className = "fa fa-volume-xmark";
-                soundOFF = true;
-                soundON.muted = !soundON.muted;
-            } 
-            else{
-                i.className = "fas fa-volume-high"; 
-                soundOFF = false;
-                soundON.muted = !soundON.muted;
-            }
-        };
+    /*mute-function*/
+
+    var soundOFF = false; 
+    var soundON = document.getElementById('video');
+    function change(){
+        
+        let i = document.getElementById('sound');
+        
+        if (soundOFF == false){
+            i.className = "fa fa-volume-xmark";
+            soundOFF = true;
+            soundON.muted = !soundON.muted;
+            onclick
+        } 
+        else{
+            i.className = "fas fa-volume-high"; 
+            soundOFF = false;
+            soundON.muted = !soundON.muted;
+        }
+    };
 
     </script>
+
 </body>
 </html>
