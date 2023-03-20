@@ -6,10 +6,7 @@
     <link rel="stylesheet" href="styles/style.css"> <!--style the website-->
     <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
 
-    <!--icon link-->
-    <script src="https://kit.fontawesome.com/fe1178b9a0.js" crossorigin="anonymous"></script>
-
-    <!--meta link-->
+    <!--meta links-->
     <meta charset="UTF-8">
     <meta name="description" content="anime">
     <meta name="keywords" content="anime, demon, slayer, katana">
@@ -21,17 +18,12 @@
 
     <!--video-->
     <div class="background">
-        <video autoplay loop id="video">
+        <video autoplay loop muted id="video">
             <source src="videos/anime - 01.mp4" type="video/mp4">
         </video>
         <div class="middle-text">
             <h1>Your Dreams starts here</h1>
         </div>
-    </div>
-
-    <!--icon-->
-    <div>
-        <i class="fas fa-volume-high" id="sound" onclick="change()"></i>
     </div>
 
     <!--menu bar-->
@@ -41,31 +33,6 @@
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
     </div>
-    
-    <script>
-
-    /*mute-function*/
-
-    var soundOFF = false; 
-    var soundON = document.getElementById('video');
-    function change(){
-        
-        let i = document.getElementById('sound');
-        
-        if (soundOFF == false){
-            i.className = "fa fa-volume-xmark";
-            soundOFF = true;
-            soundON.muted = !soundON.muted;
-            onclick
-        } 
-        else{
-            i.className = "fas fa-volume-high"; 
-            soundOFF = false;
-            soundON.muted = !soundON.muted;
-        }
-    };
-
-    </script>
 
 </body>
 </html>

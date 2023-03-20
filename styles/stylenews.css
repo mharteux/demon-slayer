@@ -1,3 +1,12 @@
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left;
+    background-size: cover;
+    margin: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
 #video{
     object-fit: cover;
     position: fixed;
@@ -37,24 +46,6 @@
     background-color: #007363;
     color: white;
     text-shadow: 0px 0px 5px white;
-}
-i#sound{
-    position: fixed;
-    color: white;
-    font-size: 40px;
-    text-shadow: 0px 0px 5px white;
-    cursor: pointer;
-    margin-left: 315px;
-    margin-top: 5px;
-}
-body{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left;
-    background-size: cover;
-    margin: 20px;
-    text-align: justify;
-    text-justify: inter-word;
 }
 .box h1{
     font-family: 'Square Peg', cursive;

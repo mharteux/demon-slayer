@@ -6,9 +6,6 @@
     <link rel="stylesheet" href="styles/stylenews.css"> <!--style the website-->
     <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
 
-    <!--icon link-->
-    <script src="https://kit.fontawesome.com/fe1178b9a0.js" crossorigin="anonymous"></script>
-
     <!--meta link-->
     <meta charset="UTF-8">
     <meta name="description" content="anime">
@@ -20,14 +17,17 @@
 <body>
 
     <!--video-->
-    <video autoplay loop id="video" dir="rtl">
+    <video autoplay loop muted id="video" dir="rtl">
         <source src="videos/anime - 03.mp4" type="video/mp4">
     </video>
 
-    <!--audio-->
-    <audio autoplay loop id="music">
-        <source src="music/demon slayer.mp3" type="audio/mp3">
-    </audio>
+    <!--menu bar-->
+    <div class="menubar">
+        <a class="active" href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
 
     <!--box and text-->
     <div class="box">
@@ -39,43 +39,6 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quasi expedita ut voluptatem ea quae, magnam sunt dolore laborum rem recusandae totam omnis, nihil, dignissimos a reiciendis! Fuga, facilis maxime.
         </p>
     </div>
-
-    <!--menu bar-->
-    <div class="menubar">
-        <a class="active" href="index.html">Home</a>
-        <a href="news.html">News</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
-    </div>
-
-    <!--icons-->
-    <div>
-        <i class="fa fa-volume-high" id="sound" onclick="change()"></i>
-    </div>
-
-    <script>
-        
-        /*mute-function*/
-        var soundOFF = false; 
-        var soundON = document.getElementById('music');
-
-        function change(){
-            
-            let i = document.getElementById('sound');
-            
-            if (soundOFF == false){
-                i.className = "fa fa-volume-xmark";
-                soundOFF = true;
-                soundON.muted = !soundON.muted;
-            } 
-            else{
-                i.className = "fa fa-volume-high"; 
-                soundOFF = false;
-                soundON.muted = !soundON.muted;
-            }
-        };
-
-    </script>
 
 </body>
 </html>
