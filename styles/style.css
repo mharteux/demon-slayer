@@ -54,16 +54,10 @@ body{
 
 /* Responsivity */
 @media screen and (max-width: 1360px){
-    .middle-text{
-        font-size: 35px;
-    }
     .menubar a{
         font-size: 15px;
     }
-}    
-
-@media screen and (max-width: 1360px){
     .middle-text{
         font-size: 25px;
     }
-}
+}    
