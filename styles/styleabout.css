@@ -1,33 +1,22 @@
 body{
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left;
-    background-size: cover;
     margin: 20px;
-    text-align: justify;
-    text-justify: inter-word;
 }
+
+/* Background Video */
 #video{
     object-fit: cover;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /*viewport width*/
-    height: 100vh; /*viewport height*/
-    z-index: -1;
-    animation: 2s linear opacity;
-    -webkit-animation: opacity 1s linear;
-    -moz-animation: opacity 1s linear;
-    -o-animation: opacity 1s linear;
+    width: 100%;
+    height: 100%;  
 }
+
+/* Menu Bar */
 .menubar{
     position: fixed;
     background-color: #07092a;
-    overflow: hidden;
-    animation: 2s linear opacity;
-    -webkit-animation: opacity 1s linear;
-    -moz-animation: opacity 1s linear;
-    -o-animation: opacity 1s linear;
 }
 .menubar a{
     float: left;
@@ -36,17 +25,20 @@ body{
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 20px white;
 }
 .menubar a:hover{
-    background-color: #e9fdfe;
-    color: black;
+    background-color: #dac2e8;
+    color: white;
+    text-shadow: 0px 0px 5px white;
 }
 .menubar a.active{
     background-color: #656198;
     color: white;
     text-shadow: 0px 0px 5px white;
 }
+
+/* Text Box */
 .box h1{
     font-family: 'Square Peg', cursive;
     font-size: 80px;
@@ -55,7 +47,15 @@ body{
     text-shadow: 0px 0px 15px white;
     margin-bottom: -50px;
     text-align: center; 
-    user-select: none;
+}
+.box p{
+    font-family: 'Square Peg', cursive;
+    font-size: 40px;
+    color: white;
+    opacity: 1;
+    text-shadow: 0px 0px 15px white;
+    padding: 50px;
+    text-align: justify; 
 }
 .box{
     background: #07092a;
@@ -65,46 +65,28 @@ body{
     width: 600px;
     margin-bottom: 18px; 
 }
-.box p{
-    font-family: 'Square Peg', cursive;
-    font-size: 40px;
-    color: white;
-    opacity: 1;
-    text-shadow: 0px 0px 15px white;
-    padding: 50px;
-    text-align: justify;
-    text-justify: inter-word; 
-    user-select: none;
-}
-@media screen and (max-height: 768px){
-    .box{
-        width: 530px;
-        height: auto;
+
+/* Responsivity */
+@media screen and (max-width: 970px){
+    #video{
+        width: 550px;
     }
-}
-@media screen and (max-height: 667px){
-    .box{
-        float: none;
+    .menubar{
         position: absolute;
-        background-color: #07092a;
-        top: 80px;
-        width: 440px;
-        height: auto;
     }
-}
-@keyframes opacity{
-    0% {
-        display: none;
-        opacity: 0;
+    .menubar a{
+        font-size: 14px;
     }
-
-    1% {
-        display: block;
-        opacity: 0;
+    .box h1{
+        margin-top: 5px;
     }
-
-    100% {
-        display: block;
-        opacity: 1;
+    .box p{
+        font-size: 30px;
+        padding: 20px;
+    }
+    .box{
+        width: auto;
+        margin-top: 70px;
+        margin-right: -10px;
     }
 }
