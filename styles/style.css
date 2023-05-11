@@ -53,7 +53,10 @@ body{
 }
 
 /* Responsivity */
-@media screen and (max-width: 1360px){
+@media screen and (max-width: 970px){
+    .menubar{
+        position: absolute;
+    }
     .menubar a{
         font-size: 14px;
     }
